@@ -14,6 +14,10 @@ console.log(express == express1) // true, same instance of express
 
 const port = process.env.PORT || 3000
 
+app.get('/', function (req, res){
+    res.send("Welcome to contact manager")
+})
+
 app.use(express.json())
 app.use('/contacts', contactRouter)
 
